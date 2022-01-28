@@ -1,0 +1,24 @@
+// Global Variables 
+// font-family: 'Open Sans', sans-serif;
+
+$title-font-family : 'Montserrat', sans-serif;
+$text-font-family :  'Open Sans', sans-serif;
+$title-size : 3.2rem;
+$text-size : 1.6rem;
+$sub-title-size :2.4rem;
+
+$color-1:  #2f1100;
+$color-2: #4f260d;
+$color-3: #774512;
+$color-4: #a56e14;
+$color-Backg-header: #e4ab41;
+$color-text-logo:#ff6347;
+
+@mixin gradient-background {
+	background: #8A2387;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #F27121, #E94057, #8A2387); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+ 
+

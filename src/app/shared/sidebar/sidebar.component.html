@@ -1,0 +1,7 @@
+<div>
+	<h3>Where do you want to go</h3>
+	<ul>
+		<li *ngFor="let menu of mainMenu"
+		[routerLink]="[menu.ruta]">{{menu.text}}</li>
+	</ul>
+</div>

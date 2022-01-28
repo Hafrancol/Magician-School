@@ -1,0 +1,69 @@
+@import '../../../config';
+
+@media screen and (min-width:320px){
+	
+	.school-info{
+		width: 90%;
+		text-align: left;
+		margin: 10px auto;
+		
+		hr{
+			width: 100%;
+			height: 3px;
+			@include gradient-background; // background with gradient
+			border: none;
+		}
+		
+		h2{
+			margin: 10px 0;
+			text-align: center;
+			color: $color-2;
+		}
+	}
+
+	aside{
+		margin: 20px 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		h2{
+			width: 90%;
+			text-align: center;
+		}
+	}
+}
+
+@media screen and (min-width:800px){
+	.school-info{
+		width: 80%;
+		text-align: center;
+		margin: 10px auto;
+		
+		hr{
+			width: 100%;
+			height: 3px;
+			@include gradient-background; // background with gradient
+			border: none;
+			margin-top: 15px;
+		}
+		
+		h2{
+			margin: 35px 0px 30px 0;
+			text-align: center;
+			color: $color-2;
+		}
+	}
+
+	aside{
+		margin: 20px 0;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
+		h2{
+			width: 90%;
+			text-align: center;
+		}
+	}
+}
