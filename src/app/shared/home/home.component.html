@@ -11,12 +11,21 @@
 				<strong>Ravenclaw</strong>,
 				<strong>Slytherin</strong>. Not wait for visit us.
 			</p>
+			<br>
+			<p class="houses-click">
+				Please click on the houses to know more ...
+			</p>
 		</div>
 		<app-mosaic></app-mosaic>
 	</main>
 
 	<aside>
-		<app-sidebar></app-sidebar>
+		<ul class="buttons-menu-container">
+			<app-button 	*ngFor="let menu of mainMenu"
+										[menuInfo]="menu">
+			</app-button>
+		</ul>
+		
 	</aside>
 </section>
 

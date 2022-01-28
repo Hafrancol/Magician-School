@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-interface MainMenu {
-	text : string,
-	ruta : string
-}
+
 
 @Component({
   selector: 'app-sidebar',
@@ -12,20 +9,7 @@ interface MainMenu {
 })
 export class SidebarComponent implements OnInit {
 
-	mainMenu : MainMenu [] = [
-		{
-			text:'Students',
-			ruta:'/students'
-		},
-		{
-			text:'Teachers',
-			ruta:'/teachers'
-		},
-		{
-			text:'Houses',
-			ruta:'/houses'
-		}
-	] 
+
 
   constructor() { }
 

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MainMenu } from '../interfaces/routes.interface';
+
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+	mainMenu : MainMenu [] = [
+		{
+			text:'Students',
+			route:'/students'
+		},
+		{
+			text:'Teachers',
+			route:'/teachers'
+		},
+		
+	] 
   constructor() { }
 
   ngOnInit(): void {
