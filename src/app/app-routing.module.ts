@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './shared/home/home.component';
+// import { HomeComponent } from './shared/home/home.component';
 
 const routes: Routes = [
 
 	{
 		path:'',
-		component: HomeComponent
+		loadChildren: ()=> import ('./shared/shared.module')
+			.then(m=>m.SharedModule)
 	},	
 	{
 		path:'students',
@@ -19,7 +20,7 @@ const routes: Routes = [
 			.then(m => m.TeachersModule)
 	},
 	{
-		path:'houses',
+		path:'houses/:id',
 		loadChildren: () => import('./houses/houses.module')
 			.then(m => m.HousesModule)
 	},

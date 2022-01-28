@@ -1,1 +1,23 @@
-<p>gryffindor works!</p>
+<section class="gryffindor">
+	<h1>Gryfindor House</h1>
+	<div>
+		<app-input (inputEmitter)="inputEvent($event)"></app-input>
+	</div>
+	<h2>Gryfindor's students</h2>
+
+
+
+	<div *ngIf="getStudents().length > 0; else notStudents "	class="students-cotainer">	
+		<app-card 	*ngFor="let student of getStudents()" [character]="student"></app-card>
+	</div>
+
+	<ng-template #notStudents>
+		<div class="notStudents">
+			<p>your search doen't match with: <strong>{{inputText}}</strong> </p>
+	</div>
+		
+	</ng-template>
+
+
+
+</section>

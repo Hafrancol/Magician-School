@@ -1,0 +1,18 @@
+<div class="card">
+	<div class="card-image">
+
+		<img *ngIf="character.image; else elseTemplate"
+					[src]="character.image" alt="{{character.name}}"
+		>
+
+		<ng-template #elseTemplate>
+			<img src="https://i.postimg.cc/9F2RWrSf/none-Image.png" alt="none">
+		</ng-template>
+	</div>
+
+	<h2>{{character.name}}</h2>
+
+	<p> {{character.house}}</p>
+	<p> {{character.dateOfBirth}}</p>
+	<p> {{character.species}}</p>
+</div>

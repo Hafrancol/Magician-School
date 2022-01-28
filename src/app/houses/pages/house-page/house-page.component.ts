@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Character } from 'src/app/interfaces/characters.interface';
+import { GlobalServicesService } from 'src/app/services/global-services.service';
+
 
 @Component({
   selector: 'app-house-page',
@@ -6,10 +10,40 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./house-page.component.scss']
 })
 export class HousePageComponent implements OnInit {
+	idAllowed :string [] = ['gryffindor',	'hufflepuff','ravenclaw','slytherin']
+	students:Character[] = [];
+	inputText:string = ''
 
-  constructor() { }
+	id:string = ''
+
+  constructor(
+			private activatedRoute: ActivatedRoute,
+			private globalService:GlobalServicesService,
+			private router:Router
+	) { }
 
   ngOnInit(): void {
+		const {id} = this.activatedRoute.snapshot.params;
+		if(!this.idAllowed.includes(id)){
+			this.router.navigateByUrl('')
+		}
+		this.globalService.getHouseByName(id)
+
+		console.log(id)
   }
+
+	inputEvent(inputValue:string){
+		this.inputText = inputValue
+	}
+
+	getStudents():Character[]{
+
+		if(this.inputText === '') return this.globalService.getStudents
+
+		return this.globalService.getStudents.filter(({name})=>{
+			return name.toLowerCase().includes(this.inputText.toLowerCase())
+		})
+	}
+
 
 }

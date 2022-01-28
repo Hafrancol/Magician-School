@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HousePageComponent } from './pages/house-page/house-page.component';
-
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
 	{
 		path:'',
-		component:HousePageComponent
-		
+		component:HomeComponent
 	}
 ];
 
@@ -15,4 +13,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class HousesRoutingModule { }
+export class SharedRoutingModule { }
