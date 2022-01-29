@@ -1,0 +1,43 @@
+@import '../../../../config';
+@media screen and (min-width:320px){
+	section{
+		text-align: center;
+		h1{
+			margin: 15px 0;
+			color: $color-1;
+		}
+		h2{
+			margin: 15px 0;
+			color: $color-2;
+		}
+	}
+	.students-cotainer{
+		display: flex;
+		gap: 10px;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.notStudents{
+		background-color: #D0342C;
+		border-radius: 5px;
+		border: none;
+		width: 90%;
+		margin: 0 auto;
+		padding: 10px;
+	
+		color: white;
+	}
+}
+
+@media screen and (min-width:800px){
+	.students-cotainer{
+		display: grid;
+		grid-template-columns: repeat(4,1fr);
+		gap: 10px;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+}

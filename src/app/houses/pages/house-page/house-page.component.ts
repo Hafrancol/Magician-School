@@ -11,7 +11,7 @@ import { GlobalServicesService } from 'src/app/services/global-services.service'
 })
 export class HousePageComponent implements OnInit {
 	idAllowed :string [] = ['gryffindor',	'hufflepuff','ravenclaw','slytherin']
-	students:Character[] = [];
+	characters:Character[] = [];
 	inputText:string = ''
 
 	id:string = ''
@@ -28,7 +28,7 @@ export class HousePageComponent implements OnInit {
 			this.router.navigateByUrl('')
 		}
 		this.globalService.getHouseByName(id)
-
+		this.id = id
 		console.log(id)
   }
 
@@ -37,6 +37,7 @@ export class HousePageComponent implements OnInit {
 	}
 
 	getStudents():Character[]{
+		this.characters = this.globalService.getStudents
 
 		if(this.inputText === '') return this.globalService.getStudents
 

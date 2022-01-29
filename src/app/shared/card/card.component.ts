@@ -22,17 +22,20 @@ export class CardComponent implements OnInit {
   ngOnInit(): void {
   }
 
-	studentsId(){
-		this.router.navigateByUrl('students/listofstudents/45')
-	}
+	
 
 	knowMoreAboutCharacter(){
 
 		if(this.character.hogwartsStudent){
 			this.router.navigateByUrl(`students/listofstudents/${this.character.name}`)
-		}else{
-			console.log('RUTA PROFESOR')
 		}
+		else if(this.character.hogwartsStaff){
+			this.router.navigateByUrl(`teachers/listofteachers/${this.character.name}`)
+
+		}else if(!this.character.hogwartsStudent && !this.character.hogwartsStaff){
+			this.router.navigateByUrl('')
+		}
+
 
 	}
 

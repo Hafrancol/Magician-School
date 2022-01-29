@@ -18,13 +18,13 @@ export class StudentsByIdComponent implements OnInit {
 		private GlobalServices:GlobalServicesService
 	) { 
 
-		const {id } = this.activatedRoute.snapshot.params
-		this.studentId = id;
-		this.GlobalServices.getAllStudents();
+	
 	}
 
   ngOnInit(): void {
-
+		const {id } = this.activatedRoute.snapshot.params
+		this.studentId = id;
+		this.GlobalServices.getAllStudents();
   }
 
 	getStudentById(){

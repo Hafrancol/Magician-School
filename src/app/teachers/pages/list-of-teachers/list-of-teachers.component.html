@@ -1,0 +1,25 @@
+<section class="teachers">
+	<h1>Hogwarts's teachers</h1>
+	<div>
+		<app-input (inputEmitter)="inputEvent($event)"></app-input>
+	</div>
+	<h2>Members: {{teachers.length}}</h2>
+
+
+
+	<div *ngIf="getTeachers().length > 0; else notTeachers "	class="students-cotainer">	
+		<app-card 	*ngFor="let teacher of getTeachers()" 
+								[character]="teacher"
+								></app-card>
+	</div>
+
+	<ng-template #notTeachers>
+		<div class="notStudents">
+			<p>your search doen't match with: <strong>{{inputText}}</strong> </p>
+	</div>
+		
+	</ng-template>
+
+
+
+</section>

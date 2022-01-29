@@ -9,6 +9,8 @@ import { HttpClient } from '@angular/common/http';
 export class GlobalServicesService {
 
 	private students:Character [] = [];
+	private teachers:Character [] = [];
+
 	baseURL = 'http://hp-api.herokuapp.com/api/characters';
 
   constructor(
@@ -17,6 +19,10 @@ export class GlobalServicesService {
 
 	get getStudents():Character[]{
 		return [...this.students]
+	}
+
+	get getTeachers():Character[]{
+		return [...this.teachers]
 	}
 
 	getHouseByName(houseName: string){
@@ -37,6 +43,14 @@ export class GlobalServicesService {
 				this.students = students
 			})
 
+
+	}
+
+	getAllTeachers(){
+		this.http.get<Character[]>(`${this.baseURL}/staff`)
+		.subscribe((teachers)=>{
+			this.teachers = teachers
+		})
 
 	}
 }

@@ -4,13 +4,13 @@ import { Character } from 'src/app/interfaces/characters.interface';
 import { GlobalServicesService } from 'src/app/services/global-services.service';
 
 @Component({
-  selector: 'app-list-of-students',
-  templateUrl: './list-of-students.component.html',
-  styleUrls: ['./list-of-students.component.scss']
+  selector: 'app-list-of-teachers',
+  templateUrl: './list-of-teachers.component.html',
+  styleUrls: ['./list-of-teachers.component.scss']
 })
-export class ListOfStudentsComponent implements OnInit {
+export class ListOfTeachersComponent implements OnInit {
 
-	students:Character[] = [];
+	teachers:Character[] = [];
 	inputText:string = '';
 
   constructor(
@@ -18,24 +18,24 @@ export class ListOfStudentsComponent implements OnInit {
 		private router:Router
 	) { }
 
- 
   ngOnInit(): void {
-		this.globalService.getAllStudents();
-
+	
+		this.globalService.getAllTeachers()
   }
 
 	inputEvent(inputValue:string){
 		this.inputText = inputValue
 	}
 
-	getStudents():Character[]{
-		this.students = this.globalService.getStudents
-		if(this.inputText === '') return this.globalService.getStudents
+	getTeachers():Character[]{
 
-		return this.globalService.getStudents.filter(({name})=>{
+		this.teachers = this.globalService.getTeachers
+
+		if(this.inputText === '') return this.globalService.getTeachers
+
+		return this.globalService.getTeachers.filter(({name})=>{
 			return name.toLowerCase().includes(this.inputText.toLowerCase())
 		})
 	}
-
 
 }
