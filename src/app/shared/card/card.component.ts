@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class CardComponent implements OnInit {
 
-	@Input() character!:Character;
+	@Input() character!:Character; // reading the father value about list of characters to show like card
 	@Input() route = '';	
 	
 
@@ -24,15 +24,15 @@ export class CardComponent implements OnInit {
 
 	
 
-	knowMoreAboutCharacter(){
+	knowMoreAboutCharacter(){ // when click on card navigate to url
 
-		if(this.character.hogwartsStudent){
+		if(this.character.hogwartsStudent){ // if is it student
 			this.router.navigateByUrl(`students/listofstudents/${this.character.name}`)
 		}
-		else if(this.character.hogwartsStaff){
+		else if(this.character.hogwartsStaff){ // if is it techer
 			this.router.navigateByUrl(`teachers/listofteachers/${this.character.name}`)
 
-		}else if(!this.character.hogwartsStudent && !this.character.hogwartsStaff){
+		}else if(!this.character.hogwartsStudent && !this.character.hogwartsStaff){ // not teacher and student
 			this.router.navigateByUrl('')
 		}
 

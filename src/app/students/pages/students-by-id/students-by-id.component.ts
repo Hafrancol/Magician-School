@@ -36,7 +36,6 @@ export class StudentsByIdComponent implements OnInit {
 		if(student.length===0) {
 			this.router.navigateByUrl('')
 		}
-		console.log('Prfesorr',student)
 
 		this.student = student[0];
 		return student[0]

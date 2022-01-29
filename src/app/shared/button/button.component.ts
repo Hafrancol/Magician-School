@@ -7,7 +7,7 @@ import { MainMenu } from '../../interfaces/mainMenu.interface';
   styleUrls: ['./button.component.scss']
 })
 export class ButtonComponent implements OnInit {
-	@Input() menuInfo : MainMenu  = { text:'', route:''} 
+	@Input() menuInfo : MainMenu  = { text:'', route:''} // recive the routes to navigate and value about the button
 
 
   constructor() { }

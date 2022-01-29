@@ -1,12 +1,14 @@
 <div class="card" 
-	(click)="knowMoreAboutCharacter()">
+	(click)="knowMoreAboutCharacter()"> <!-- when does click on the card-->
 		<span>{{route}}</span>
 	<div class="card-image">
 
-		<img *ngIf="character.image; else elseTemplate"
+		<!-- If the image exist so show the original image -->
+		<img *ngIf="character.image; else elseTemplate"  
 					[src]="character.image" alt="{{character.name}}"
 		>
 
+		<!-- If the image doen't exist show a 'Non-Image' -->
 		<ng-template #elseTemplate>
 			<img src="https://i.postimg.cc/9F2RWrSf/none-Image.png" alt="none">
 		</ng-template>

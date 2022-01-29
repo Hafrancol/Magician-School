@@ -1,22 +1,22 @@
-<section class="gryffindor">
+<section class="houses">
 	<h1>{{id | titlecase}}'s house</h1>
 	<div>
 		<app-input (inputEmitter)="inputEvent($event)"></app-input>
 	</div>
-	<h2>Members: {{characters.length}}</h2>
+	<h2> Members: {{characters.length}}</h2>
 
 
-	<div *ngIf="getStudents().length > 0; else notStudents "	class="students-cotainer">	
+	<div 	*ngIf="getStudents().length > 0; else notStudents "	
+				class="students-container">	
 		<app-card 	*ngFor="let student of getStudents()" 
-								[character]="student"
-								></app-card>
+								[character]="student">
+		</app-card>
 	</div>
 
 	<ng-template #notStudents>
-		<div class="notStudents">
+		<div class="not-students">
 			<p>your search doen't match with: <strong>{{inputText}}</strong> </p>
-	</div>
-		
+		</div>		
 	</ng-template>
 
 

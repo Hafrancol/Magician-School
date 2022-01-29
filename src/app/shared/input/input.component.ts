@@ -15,7 +15,7 @@ export class InputComponent implements OnInit {
   ngOnInit(): void {
   }
 
-	inputEvent(){
+	inputEvent(){ // for every key press emit the value
 		this.inputEmitter.emit(this.inputText)
 	}
 

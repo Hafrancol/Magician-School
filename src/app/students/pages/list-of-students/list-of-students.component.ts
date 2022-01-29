@@ -19,16 +19,16 @@ export class ListOfStudentsComponent implements OnInit {
 	) { }
 
  
-  ngOnInit(): void {
+  ngOnInit(): void {//fetch the data
 		this.globalService.getAllStudents();
 
   }
 
-	inputEvent(inputValue:string){
+	inputEvent(inputValue:string){ // recive the input event to press the key
 		this.inputText = inputValue
 	}
 
-	getStudents():Character[]{
+	getStudents():Character[]{ // get students and filter by name or lastname
 		this.students = this.globalService.getStudents
 		if(this.inputText === '') return this.globalService.getStudents
 

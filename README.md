@@ -1,27 +1,27 @@
 # MagicalSchool
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.11.
+This project was generated with Angular version 12
+
+To install all dependecies `npm install`
+
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `npm run start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically open the server and reload if you change any of the source files.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `npm run start` build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+## How to navigate through the app
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+You can watch the students, teachers and members of the houses
+
+* To visit the members of the houses just click on the shields and you will watch all members, students, teachers and more, if you want to search by name or lastname, you can use the text input  to search your favorite character, if you would like to know more about it, just click on the card and learn more about it, it's just works for students and teachers, the rest of characters is not availiable yet
+
+
+*  You have anothers options like search by students and teachers, just need to use the respective buttons to know more about it, click on the students or teachrs buttons to visit them, it's work like the firt option, click on the card to know more about the character.

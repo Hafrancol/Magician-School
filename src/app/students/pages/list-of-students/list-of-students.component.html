@@ -1,12 +1,13 @@
-<section class="gryffindor">
-	<h1>Gryfindor House</h1>
+<section class="list-students">
+	<h1>Gryfindor </h1>
 	<div>
+		<!-- recive the inputEvent -->
 		<app-input (inputEmitter)="inputEvent($event)"></app-input>
 	</div>
 	<h2>Members: {{students.length}}</h2>
 
 
-
+<!-- Show the characters and send the character info to the card component-->
 	<div *ngIf="getStudents().length > 0; else notStudents "	class="students-cotainer">	
 		<app-card 	*ngFor="let student of getStudents()" 
 								[character]="student"
