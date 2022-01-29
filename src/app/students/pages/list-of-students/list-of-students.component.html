@@ -8,7 +8,9 @@
 
 
 	<div *ngIf="getStudents().length > 0; else notStudents "	class="students-cotainer">	
-		<app-card 	*ngFor="let student of getStudents()" [character]="student"></app-card>
+		<app-card 	*ngFor="let student of getStudents()" 
+								[character]="student"
+								></app-card>
 	</div>
 
 	<ng-template #notStudents>

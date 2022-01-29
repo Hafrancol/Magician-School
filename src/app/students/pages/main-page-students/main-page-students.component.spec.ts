@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GryffindorComponent } from './gryffindor.component';
+import { MainPageStudentsComponent } from './main-page-students.component';
 
-describe('GryffindorComponent', () => {
-  let component: GryffindorComponent;
-  let fixture: ComponentFixture<GryffindorComponent>;
+describe('MainPageStudentsComponent', () => {
+  let component: MainPageStudentsComponent;
+  let fixture: ComponentFixture<MainPageStudentsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GryffindorComponent ]
+      declarations: [ MainPageStudentsComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GryffindorComponent);
+    fixture = TestBed.createComponent(MainPageStudentsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

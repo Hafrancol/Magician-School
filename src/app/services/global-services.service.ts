@@ -8,7 +8,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class GlobalServicesService {
 
-	private students:Character [] = []
+	private students:Character [] = [];
+	baseURL = 'http://hp-api.herokuapp.com/api/characters';
 
   constructor(
 		private http: HttpClient
@@ -19,13 +20,23 @@ export class GlobalServicesService {
 	}
 
 	getHouseByName(houseName: string){
-		const baseURL = 'http://hp-api.herokuapp.com/api/characters/house'
-		this.http.get<Character[]>(`${baseURL}/${houseName}`)
+	
+		this.http.get<Character[]>(`${this.baseURL}/house/${houseName}`)
 			.subscribe((students)=>{
 				
 				this.students = students
 				console.log(this.students)
 			})
+
+	}
+
+	getAllStudents(){
+
+		this.http.get<Character[]>(`${this.baseURL}/students`)
+			.subscribe((students)=>{
+				this.students = students
+			})
+
 
 	}
 }

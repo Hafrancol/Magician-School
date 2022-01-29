@@ -10,7 +10,10 @@
 	border-radius: 5px;
 	text-align: center;
 	color: white;
-	
+	cursor: pointer;
+	&:hover{
+		box-shadow: 1px 1px 10px 0px black;
+	}
 }
 
 div + h2 {

@@ -1,4 +1,6 @@
-<div class="card">
+<div class="card" 
+	(click)="knowMoreAboutCharacter()">
+		<span>{{route}}</span>
 	<div class="card-image">
 
 		<img *ngIf="character.image; else elseTemplate"

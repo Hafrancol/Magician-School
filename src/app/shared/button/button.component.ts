@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { MainMenu } from '../interfaces/routes.interface';
+import { MainMenu } from '../../interfaces/mainMenu.interface';
 
 @Component({
   selector: 'app-button',

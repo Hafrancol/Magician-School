@@ -1,0 +1,22 @@
+<section *ngIf="getStudentById()">
+
+	<h1>{{getStudentById().name}}</h1>
+
+	<div class="student-image">
+		<img *ngIf="getStudentById().image;else noImage"
+				[src]="getStudentById().image" alt="">
+
+		<ng-template #noImage>
+			<img src="https://i.postimg.cc/9F2RWrSf/none-Image.png" alt="">
+		</ng-template>
+	</div>
+
+	<h3>{{getStudentById().house}}</h3>
+
+
+	<p>Specie: {{getStudentById().species}}</p>
+	<p>Gender: {{getStudentById().gender}}</p>
+	<p>Ancestry: {{getStudentById().ancestry}}</p>
+	<p>Actor: {{getStudentById().actor}}</p>
+	
+</section>
